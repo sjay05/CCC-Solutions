@@ -1,5 +1,10 @@
-n = 4
-rounds = input()
+n = input()
+rounds = []
+for i in range(n):
+    line_input = raw_input().rsplit()
+    for j in range(len(line_input)):
+        rounds.append(int(line_input[j]))
+
 antonia = 100
 david = 100
 i = 0
