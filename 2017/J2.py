@@ -1,5 +1,5 @@
-n = input("N-Value?")
-k = input("K-value?")
+n = input()
+k = input()
 
 def shifty_sum(n, k):
     a = n

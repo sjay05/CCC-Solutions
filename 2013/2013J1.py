@@ -1,5 +1,5 @@
-x = input(': ')
-y = input(': ')
+x = input()
+y = input()
 
 if x == y:
     print y

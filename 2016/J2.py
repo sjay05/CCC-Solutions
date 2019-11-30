@@ -12,7 +12,7 @@ print "Please Enter Magic numbers\n"
 for row in range(0, 4):
     rinput = raw_input()
     for col, ns in enumerate(rinput.split(" ")):
-        magic_inputs[row][col] = int(nsin)
+        magic_inputs[row][col] = int(ns)
 
 
 print "Now 3 by 3 matrix looks:", magic_inputs

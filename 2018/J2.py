@@ -1,6 +1,6 @@
-n = raw_input("First Line:")
-a = raw_input("Second Line:")
-b = raw_input("Third Line:")
+n = raw_input()
+a = raw_input()
+b = raw_input()
 
 i = 0
 c = 0
@@ -14,4 +14,4 @@ print c
 
 
 
-    
+

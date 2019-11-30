@@ -1,5 +1,5 @@
-x = input("X-value?")
-y = input("Y-value?")
+x = input()
+y = input()
 
 def find_quadrant(x, y):
     if x > 0 and y > 0:

@@ -1,8 +1,7 @@
-print "Welcome to Chip's Fast Food Emporium"
-burger = input("Please enter a burger choice: ")
-side = input("Please enter a side order choice: ")
-drink = input("Please enter a drink choice: ")
-dessert = input("Please enter a dessert choice: ")
+burger = input()
+side = input()
+drink = input()
+dessert = input()
 
 burger_choice = {1: 461, 2: 431, 3: 420, 4: 0}
 drink_choice = {1: 130, 2: 160, 3: 118, 4: 0}

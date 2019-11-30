@@ -1,7 +1,7 @@
 number_of_wins = 0
 count = 1
 while count <= 6:
-  x = raw_input("")
+  x = raw_input()
   if x != "W" and x != "L":
       print "Not able to read"
   if x == "W":

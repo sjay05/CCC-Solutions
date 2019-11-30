@@ -1,6 +1,6 @@
-value = input("Enter current year: ")
+value = input()
 i = value
-final = input("Enter a future year: ")
+final = input()
 
 while i < final:
     print "All positions change in year %s" % i

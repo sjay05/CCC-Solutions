@@ -1,5 +1,5 @@
-word1 = raw_input("First Phrase: ")
-word2 = raw_input("Second Phrase: ")
+word1 = raw_input()
+word2 = raw_input()
 
 if len(word1) != len(word2):
     print "It is not a anagram."

@@ -21,4 +21,3 @@ def pi_day(pieces, people, substring, mini):
 
 pi_day(n, k, '', 1)
 print len(valid_strings)
-print valid_strings

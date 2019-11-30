@@ -27,10 +27,16 @@ else:
     hour = min/60
     new_min = min%60
 
-    if new_min == 0:                             
-        print str(hour) + ":" + "00"
+    if new_min == 0:
+        if len(str(hour)) == 1:
+            print '0' + str(hour) + ":" + "00"
+        else:
+            print str(hour) + ":" + "00"
     else:
-        print str(hour) + ":" + str(new_min)
+        if len(str(hour)) == 1:
+            print '0' + str(hour) + ":" + str(new_min)
+        else:
+            print str(hour) + ":" + str(new_min)
 
 
 

@@ -1,4 +1,4 @@
-value = input("Number of Tiles? ")
+value = input()
 i = 0
 while True:
     if i * i > value:
