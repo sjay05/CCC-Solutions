@@ -11,3 +11,4 @@ if A > 0:
 else:
     print "The balloon first touches ground at hour:"
     print t
+

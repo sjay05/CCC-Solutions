@@ -1,5 +1,5 @@
-D = input()
 
+D = input()
 
 def simulate_time(hour, minute, time_str, value):
     for i in range(D+1):
@@ -49,3 +49,4 @@ def choose_hour(hour):
 
 
 print simulate_time(12, 0, "", 0)
+

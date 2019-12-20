@@ -1,6 +1,6 @@
-x = input("Enter tine length:")
-y = input("Enter tine spacing:")
-z = input("Enter handle length:")
+x = input()
+y = input()
+z = input()
 
 for i in range(x):
     tine_str = ""

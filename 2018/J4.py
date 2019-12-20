@@ -49,10 +49,20 @@ def check(matrix):
 
 while True:
     if not check(matrix):
-        print matrix
+        x = matrix
         break
     else:
         matrix = rotate(matrix)
+        
+for i in x:
+	string = ""
+	for j in i:
+		string += str(j) + " "
+	print string
+
+	
+
+
 
 
 

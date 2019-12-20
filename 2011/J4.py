@@ -13,6 +13,7 @@ while True:
     else:
         directions.append(sam_dir)
 
+
 def calc_dir(directions):
     x = -1
     y = -5
@@ -52,8 +53,4 @@ def calc_dir(directions):
             print str(x) + " " + str(y) + " safe"
 
 
-
 calc_dir(directions)
-
-
-

@@ -1,4 +1,4 @@
-input = "How are you :-) doing :-( today :-)?"
+input = input("How are you :-) doing :-( today :-)?")
 
 def Happy_or_Sad(input):
     if input.count(":-)") > input.count(":-("):
@@ -11,3 +11,5 @@ def Happy_or_Sad(input):
         return "unsure"
 
 print Happy_or_Sad(input)
+#  Created by Alpha on 2019-12-14.
+#  Copyright © 2019 Alpha. All rights reserved.
