@@ -63,7 +63,7 @@ while True:
         if q == "s":
             x = input()
             y = input()
-            dfs(x)
+            bfs(x)
             if distance[y] == 0:
                 OUTPUT.append("Not connected")
                 #print "Not connected"
