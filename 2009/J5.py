@@ -15,11 +15,13 @@ visited = [False] * 50
 distance = [0] * 50
 
 # Initialization of ADJ LIST
-graph = { 1: [6], 2: [6], 3: [4, 5, 6, 15], 4: [3, 5, 6], 5: [3, 4, 6], 6: [1, 2, 3, 4, 5, 7], 7: [6, 8], 
-         8: [7, 9], 9: [8, 10, 12], 10: [9, 11], 11: [10, 12], 12: [9, 11, 13], 13: [12, 14, 15], 14: [13], 
-         15:[3,13], 16:[17,18], 17:[16,18], 18:[16,17], }
+graph = {1: [6], 2: [6], 3: [4, 5, 6, 15], 4: [3, 5, 6], 5: [3, 4, 6], 6: [1, 2, 3, 4, 5, 7], 7: [6, 8],
+         8: [7, 9], 9: [8, 10, 12], 10: [9, 11], 11: [10, 12], 12: [9, 11, 13], 13: [12, 14, 15], 14: [13],
+         15: [3, 13], 16: [17, 18], 17: [16, 18], 18: [16, 17], }
 
 # BFS on Graph with SRC Node (x) from INPUT FORMAT: s, x, y
+
+
 def bfs(node):
     visited[node] = 1
     qu.put(node)
@@ -32,8 +34,9 @@ def bfs(node):
             visited[n] = True
             # Put node in QUEUE
             qu.put(n)
-            # Update distance 
+            # Update distance
             distance[n] = distance[s]+1
+
 
 # MAINTAIN OUTPUT IN LIST
 OUTPUT = []
@@ -44,7 +47,7 @@ while True:
         break
     else:
         command = q
-        if q == "i": # Add new friendship from x to y
+        if q == "i":  # Add new friendship from x to y
             x = input()
             y = input()
             if x not in graph.keys():
@@ -55,15 +58,15 @@ while True:
                 graph[y] = [x]
             else:
                 graph[y].append(x)
-        if q == "d": # Remove/Delete friendship from x to y 
+        if q == "d":  # Remove/Delete friendship from x to y
             x = input()
             y = input()
             graph[x].remove(y)
             graph[y].remove(x)
-        if q == "n": # How many friends does x have
+        if q == "n":  # How many friends does x have
             x = input()
             OUTPUT.append(len(graph[x]))
-        if q == "f": # # How many friends of friends does x have
+        if q == "f":  # How many friends of friends does x have
             x = input()
             count = []
             for i in graph[x]:
@@ -72,7 +75,7 @@ while True:
                         count.append(j)
             count = set(count)
             OUTPUT.append(len(count))
-        if q == "s": # shortest path from x to y 
+        if q == "s":  # shortest path from x to y
             x = input()
             y = input()
             bfs(x)
