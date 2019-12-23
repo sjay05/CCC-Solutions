@@ -63,7 +63,6 @@ while True:
         if q == "n": # How many friends does x have
             x = input()
             OUTPUT.append(len(graph[x]))
-            #print len(graph[x])
         if q == "f": # # How many friends of friends does x have
             x = input()
             count = []
@@ -79,10 +78,8 @@ while True:
             bfs(x)
             if distance[y] == 0:
                 OUTPUT.append("Not connected")
-                #print "Not connected"
             else:
                 OUTPUT.append(distance[y])
-                #print distance[y]
             qu = Queue.Queue()
             visited = [False] * 50
             distance = [0] * 50
