@@ -8,7 +8,7 @@ division solutions of the CCC contest.
 ## Contribute
 If you would like to contribute, such as submitting a solution to a CCC question
 (Junior or Senior), please submit a pull request. However for the pull request
-to be accepted, I prefer the language to either be Python2 or Python3. If you have
+to be accepted, I prefer the language to either be Python (2 or 3) or C++. If you have
 found a concern with any file at all, please leave an issue.
 
 ## Note:
