@@ -1,5 +1,7 @@
 # Initialize the input distance between the cities
-distance = [0, 13, 10, 12, 5]
+#distance = [0, 13, 10, 12, 5]
+distance = raw_input().split()
+distance = [int(i) for i in distance]
 
 # Initialize some variables
 i = 0

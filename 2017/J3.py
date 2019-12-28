@@ -1,8 +1,12 @@
-a = input("a-value?")
-b = input("b-value?")
-c = input("c-value?")
-d = input("d-value?")
-t = input("t-value?")
+# a = input("a-value?")
+# b = input("b-value?")
+# c = input("c-value?")
+# d = input("d-value?")
+# t = input("t-value?")
+
+a,b = map(int, raw_input().split())
+c,d = map(int, raw_input().split())
+t = input()
 
 def find_distance(a, b, c, d):
     return (c - a) + (d - b)
