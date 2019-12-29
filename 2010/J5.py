@@ -75,6 +75,6 @@ def bfs(node):
             q.put(i)
             distance[i] = distance[s]+1
 
-# Run BFS and check distance on dest node.
+# Run BFS and check distance on dest
 bfs(src)
 print distance[dest]
