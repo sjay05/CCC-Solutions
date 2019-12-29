@@ -1,3 +1,15 @@
+# CCC 2010 J5 - Knight Hop (Graph Theory)
+"""
+Quick Analysis: BFS
+
+We can simulate BFS from from a location on the chess board.
+When we need to find neighbors, we can generate them 
+using x and y coordinate math. However, a check will need
+to be done to make sure it is a legitimate position on the
+board.
+
+"""
+
 import Queue
 q = Queue.Queue()
 
@@ -5,15 +17,19 @@ visited = []
 distance = {}
 
 x,y = map(int, raw_input().split())
-src = (x,y)
+src = (x,y) # Create a src tuple
 x,y = map(int, raw_input().split())
-dest = (x,y)
+dest = (x,y) # Create a dest tuple
 
+# Generate all positions using nested
+# loops and create distance index tuple
 for i in range(1, 8+1):
     for j in range(1, 8+1):
         pair = (i,j)
         distance[pair] = 0
 
+# Check if tuple coordinate is valid 
+# in the board
 def check(tup):
     x = tup[0]
     y = tup[1]
@@ -23,6 +39,8 @@ def check(tup):
     
     return False 
 
+# Generate neighbors given initial coordinate
+# There can be a maximum of 8 moves.
 def get_neighbors(node):
     final = []
     x = node[0]
@@ -42,6 +60,9 @@ def get_neighbors(node):
     
     return final 
 
+# Run BFS from SRC position to all other
+# positions in the grid and maintain the shortest
+# distance.
 def bfs(node):
     visited.append(node)
     q.put(node)
@@ -54,5 +75,6 @@ def bfs(node):
             q.put(i)
             distance[i] = distance[s]+1
 
+# Run BFS and check distance on dest node.
 bfs(src)
 print distance[dest]

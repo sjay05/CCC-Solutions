@@ -5,7 +5,6 @@ Feature #1: Run BFS to check if you can visit all nodes
 Feature #2: In previous BFS, update distance to node from previous
 - This problem can be solved with one run of BFS. There is no edge cost.
 
-
 """
 import Queue
 q = Queue.Queue()
