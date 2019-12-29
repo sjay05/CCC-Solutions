@@ -1,118 +1,58 @@
-#Unfinished for Knight Hop Problem (Only Dijkstra Implementation)
+import Queue
+q = Queue.Queue()
 
-import Queue as Q
+visited = []
+distance = {}
 
-ax, ay = 2, 1
-bx, by = 3, 3
+x,y = map(int, raw_input().split())
+src = (x,y)
+x,y = map(int, raw_input().split())
+dest = (x,y)
 
-chess_board = [
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-]
+for i in range(1, 8+1):
+    for j in range(1, 8+1):
+        pair = (i,j)
+        distance[pair] = 0
 
+def check(tup):
+    x = tup[0]
+    y = tup[1]
+    if x >= 1 and x <= 8:
+        if y >= 1 and y <= 8:
+            return True
+    
+    return False 
 
-class Vertex:
-    def __init__(self, id):
-        self.id = id
-        self.cost = 10000000
-        self.visited = False
-        self.prev = None
+def get_neighbors(node):
+    final = []
+    x = node[0]
+    y = node[1]
+    a = (x+1, y+2) 
+    b = (x+2, y+1) 
+    c = (x+2, y-1) 
+    d = (x+1, y-2) 
+    e = (x-1, y-2) 
+    f = (x-2, y-1) 
+    g = (x-2, y+1)
+    h = (x-1, y+2)
+    templ = [a,b,c,d,e,f,g,h]
+    for i in templ:
+        if check(i):
+            final.append(i)
+    
+    return final 
 
-    def __hash__(self):
-        return hash(self.id)
+def bfs(node):
+    visited.append(node)
+    q.put(node)
+    while not q.empty():
+        s = q.get()
+        for i in get_neighbors(s):
+            if i in visited:
+                continue
+            visited.append(i)
+            q.put(i)
+            distance[i] = distance[s]+1
 
-    def __eq__(self, other):
-        return self.id == other.id
-
-    def __str__(self):
-        return str(self.id)
-
-    def __cmp__(self, other):
-        return cmp(self.cost, other.cost)
-
-
-class Edge:
-    def __init__(self, src, dest, cost):
-        self.src = src
-        self.dest = dest
-        self.cost = cost
-
-    def __str__(self):
-        return "(" + str(self.src) + "," + str(self.dest) + ")"
-
-
-class Graph:
-    def __init__(self):
-        self.adj_list = {}
-
-    def add_edge(self, src, dest, cost):
-        e = Edge(src, dest, cost)
-        l = self.adj_list.get(src, [])
-        if len(l):
-            l.append(e)
-        else:
-            self.adj_list[src] = [e]
-
-    def find_shortest_path(self, src, dest):
-        output = []
-        src.cost = 0
-        pq = Q.PriorityQueue()
-        pq.put(src)
-
-        while not pq.empty():
-            v = pq.get()
-
-            # If vertex is destination:
-            if v == dest:
-                output.append(v.id)
-                # Get previous nodes (v.prev = previous node)
-                while v.prev:
-                    output.append(v.prev)
-                    v = v.prev
-                return output
-
-            v.visited = True
-
-            # get() function returns [] if v has no neighbors
-            for e in self.adj_list.get(v, []):
-                if e.dest.visited:
-                    continue
-                cost_so_far = e.src.cost + e.cost
-                if cost_so_far < e.dest.cost:
-                    e.dest.cost = cost_so_far
-                    #
-                    e.dest.prev = e.src
-                    pq.put(e.dest)
-
-
-        if not len(output):
-            print "Path not found."
-
-        return output
-
-
-g = Graph()
-
-v1 = Vertex(1)
-v2 = Vertex(2)
-v3 = Vertex(3)
-v4 = Vertex(4)
-v5 = Vertex(5)
-v6 = Vertex(6)
-v7 = Vertex(7)
-v8 = Vertex()
-
-g.add_edge(v1, v2, 10)
-g.add_edge(v1, v3, 20)
-g.add_edge(v2, v4, 5)
-g.add_edge(v3, v4, 7)
-
-path = g.find_shortest_path(v1, v4)
-for i in path:
-    print i
+bfs(src)
+print distance[dest]
