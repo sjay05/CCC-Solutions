@@ -7,13 +7,10 @@ using namespace std;
 
 int main() {
     int n;
-    cin >> n;
+    scanf("%d", &n);
     int cost = 0;
     while (n >= 1) {
-        if (n == 1) {
-            cout << cost << endl;
-            break;
-        }
+        if (n == 1) printf("%d\n", cost); break;
         int i = n;
         while (true) {
             if (i == 1) break;
