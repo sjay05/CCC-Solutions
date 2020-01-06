@@ -10,4 +10,3 @@ while c < main:
 
 for i in range(len(list)):
     print list[i][1] * int(list[i][0])
-

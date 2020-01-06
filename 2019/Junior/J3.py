@@ -9,7 +9,7 @@ while c < main:
 
 for i in range(len(list)):
     word = list[i]
-    main_count = 01
+    main_count = 0
     main_array = []
     for x in range(len(word)):
         if x == len(word)-1 and word[x] == word[x-1]:

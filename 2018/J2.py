@@ -11,7 +11,3 @@ while i < int(n):
     i += 1
 
 print c
-
-
-
-
