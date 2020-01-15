@@ -4,7 +4,7 @@ N = input()
 arr = raw_input().split()
 arr = [int(i) for i in arr]
 
-# DP globals
+# DP globals                                                    
 dp = [0] * 4002
 ma = [0] * 2001 
 
@@ -14,7 +14,7 @@ for i in arr:
 def nailed_it_2():
     for x in range(1, 2001):
         for y in range(x, 2001):
-                if x == y:
+                if x == y:1
                     dp[x+y] += ma[x]/2
                 else:
                     dp[x+y] += min(ma[x], ma[y])
