@@ -1,57 +1,48 @@
-# Attempted Recursion "NOT WORKING"
-from collections import OrderedDict
-sub_rule_map = OrderedDict()
+from sys import stdin
+input = stdin.readline
 
-for l in range(3):
-    rule_input = raw_input().rsplit()
-    sub_rule_map[rule_input[0]] = rule_input[1]
+a1, b1 = input().split()
+a2, b2 = input().split()
+a3, b3 = input().split()
 
-output_line_spec = raw_input().rsplit()
+steps, initial, final = input().split()
+steps = int(steps)
 
-S = int(output_line_spec[0])
-I = output_line_spec[1]
-F = output_line_spec[2]
+memoize = set()
 
-target_found = False
-final_list = []
-
-def search_and_find(values, word):
-    for search in range(len(values)):
-        if values[search] == word:
-            return search+1
-
-def apply_sub_rule(r, p, w, c):
-    if c > S:
+def rec(it, seq, moves):
+    if it == steps and seq == final:
+        return moves
+    
+    if it == steps:
         return False
-    if c == S and w == F:
-        return True
-
-    # below code finally should return True or False
-    for si, sk in enumerate(sub_rule_map):
-        for i in range(len(w)):
-            try:
-                ind = w.index(sk, i)
-                # replace sk in w with sv
-                nw = w[:ind] + sub_rule_map[sk] + w[ind+len(sk):]
-                if apply_sub_rule(si+1, i+1, nw, c+1):
-                     # print job
-                    final_list.append([search_and_find(sub_rule_map.keys(), sk), p+1, nw])
-
-                    return True
-            except ValueError as e:
-                # i.e., sk is not found in w
-                continue
-
+    
+    setup = (it, seq)
+    if setup in memoize:
+        return False
+    memoize.add(setup)
+    
+    for rule, (a, b) in enumerate([(a1, b1), (a2, b2), (a3, b3)], 1):
+        pos = -1
+        while True:
+            pos = seq.find(a, pos+1)
+            
+            if pos == -1:
+                break
+            
+            ns = seq[:pos] + b + seq[pos + len(a):] 
+            output = rec(it+1, ns, moves+[[rule, pos+1, ns]])
+            if output:
+                return output
+    
     return False
 
-apply_sub_rule(0, 0, I, 0)
+value = rec(0, initial, [])
 
-o = len(final_list)-1
-while o >= 0:
-    print str(final_list[o][0]) + " " + \
-          str(final_list[o][1]) + " " + \
-          final_list[o][2]
-    o -= 1
-
-
-
+if not value:
+    print "IMPOSSIBLE"
+else:
+    for a, b, c in value:
+        print a, b, c
+            
+        
