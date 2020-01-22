@@ -1,3 +1,5 @@
+#
+
 def trucking_paths(n, index):
     total = 0
     if n == 7000:
@@ -15,8 +17,6 @@ def trucking_paths(n, index):
 
     memoization[n] = total
     return total
-
-
 
 if __name__ == '__main__':
     trucking_motels = [0, 990, 1010, 1970, 2030, 2940, 3060, 3930, 4060, 4970, 5030, 5990, 6010, 7000]

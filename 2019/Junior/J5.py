@@ -2,6 +2,26 @@
 
 # Works on Official CCC Grader.
 
+# Algorithm Highlight - Recursive Dynamic Programming
+"""
+Basically we wan't to try out all the substitution rules
+to see if we can generate the final string using the desired steps
+given in the input.
+
+We have 2 base conditions:
+    1) If we have reached the desired number of steps AND the final seq
+        - return steps recorded until then
+    2) Else if we have reached the desired number of steps but have not matched
+       the final seq
+        - return False
+
+Recursive Code:
+(a, b) is our substitution rule:
+We can find a in our seq using .find() to get the index and generate
+new string with substitution rule and call recursive function.
+
+"""
+
 from sys import stdin
 
 INPUT = stdin.readline
@@ -36,7 +56,7 @@ def rec(it, seq, moves):
 
     # Get rule # + (a,b) setup in form of a1 start seq, a2 end seq
     for rule, (a, b) in enumerate([(a1, b1), (a2, b2), (a3, b3)]):
-        # Find all pos of (a) seq in bigger sequence starting from 0 index
+        # Find all pos of (a) seq in bigger sequence starting from `0 index
         # and call recursive func on it.
         pos = -1
         while True:

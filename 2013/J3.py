@@ -1,5 +1,6 @@
-x = input(': ')
+x = input()
 a = 0
+
 
 def unique(x):
     i = 0
@@ -16,18 +17,19 @@ def unique(x):
     else:
         return False
 
-if unique(x) == True:
+
+if unique(x):
     b = 1
     while True:
-        if unique(x + b) == True:
-            print x+b
+        if unique(x + b):
+            print x + b
             break
         else:
             b += 1
 else:
     while True:
-        if unique(x + a) == True:
-            print x+a
+        if unique(x + a):
+            print x + a
             break
         else:
             a += 1

@@ -1,4 +1,6 @@
-import sys
+from sys import stdin
+
+input = stdin.readline
 
 
 def find_paths(n, i):  # n being distance travelled
@@ -25,13 +27,13 @@ def find_paths(n, i):  # n being distance travelled
 
 
 if __name__ == "__main__":
-    A = input()
-    B = input()
-    N = input()
+    A = int(input())
+    B = int(input())
+    N = int(input())
     hotels = [0, 990, 1010, 1970, 2030, 2940, 3060,  # Store preset hotel locations
               3930, 4060, 4970, 5030, 5990, 6010, 7000]
     for i in range(N):
-        hotels.append(input())
+        hotels.append(int(input()))
 
     memset = {}
     hotels.sort()  # Sort for simplicity
