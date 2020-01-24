@@ -1,3 +1,4 @@
+# Messy Version of 2019 J4
 grid = [[1, 2],[3, 4]]
 
 def horizontal(grid, new_grid):

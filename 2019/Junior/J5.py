@@ -19,7 +19,6 @@ Recursive Code:
 (a, b) is our substitution rule:
 We can find a in our seq using .find() to get the index and generate
 new string with substitution rule and call recursive function.
-
 """
 
 from sys import stdin
@@ -90,7 +89,6 @@ def rec(it, seq, moves):
 
 # Run recursive function to try out
 # all the rules and return 1 that works...
-
 
 value = rec(0, initial, [])
 

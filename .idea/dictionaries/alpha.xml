@@ -2,6 +2,10 @@
   <dictionary name="alpha">
     <words>
       <w>abcd</w>
+      <w>maxn</w>
+      <w>sline</w>
+      <w>stext</w>
+      <w>sumt</w>
     </words>
   </dictionary>
 </component>
