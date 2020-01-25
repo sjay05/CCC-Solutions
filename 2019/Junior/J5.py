@@ -21,10 +21,51 @@ We can find a in our seq using .find() to get the index and generate
 new string with substitution rule and call recursive function.
 """
 
+# --- INPUT HANDLING ---
 from sys import stdin
 
 INPUT = stdin.readline
 
+
+# --- INPUT HANDLING ---
+
+# --- START OF TEMPLATE ----
+def build(val, length):
+    return [val] * length
+
+
+def p2d(matrix):
+    for line in matrix:
+        print line
+
+
+def readStr():
+    return input()
+
+
+def readInt():
+    return int(input())
+
+
+def readStrArr():
+    arr = input().split()
+    return arr
+
+
+def readIntArr():
+    arr = input().split()
+    arr = [int(i) for i in arr]
+    return arr
+
+
+def pContents(x):
+    for i in x:
+        print i
+
+
+# ---- END OF TEMPLATE ---
+
+# --- CONSTANTS ----
 # Inputting 3 rules
 a1, b1 = INPUT().split()
 a2, b2 = INPUT().split()
