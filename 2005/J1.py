@@ -1,11 +1,22 @@
-# Not done
+# --- INPUT HANDLING ---
+from sys import stdin
 
-daytime = input()
-evening = input()
-weekend = input()
+input = stdin.readline
+# --- INPUT HANDLING ---
 
-a_price = 0
-b_price = 0
+# --- START OF TEMPLATE ----
+def gen(val, length):
+    return [val] * length
 
-a_price += (daytime-100)*0.25
-print a_price
+def p2d(matrix):
+    for line in matrix:
+        print line
+
+def readStr():
+    return input()
+
+def readInt():
+    return int(input())
+# ---- END OF TEMPLATE ---
+
+

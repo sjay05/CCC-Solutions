@@ -10,7 +10,7 @@ import Queue
 q = Queue.Queue()
 graph = {}
 visited = []
-distance = {}
+dist = {}
 
 
 def create_edge(a, b):
@@ -25,17 +25,28 @@ shortest = []
 
 
 def bfs(node):
-    visited.append(node)
     q.put(node)
     while not q.empty():
-        s = q.get()
-        goneToNodes.append(s)
-        for n in graph[s]:
-            if n in visited:
-                continue
-            visited.append(n)
-            q.put(n)
-            distance[n] = distance[s]+1
+        u = q.get()
+        goneToNodes.append(u)
+        for v in graph[u]:
+            if dist[v] == 0:
+                dist[v] = dist[u] + 1
+                q.put(v)
+
+
+# def bfs(node):
+#     visited.append(node)
+#     q.put(node)
+#     while not q.empty():
+#         s = q.get()
+#         goneToNodes.append(s)
+#         for n in graph[s]:
+#             if n in visited:
+#                 continue
+#             visited.append(n)
+#             q.put(n)
+#             dist[n] = dist[s] + 1
 
 
 N = input()
@@ -50,7 +61,7 @@ for i in range(1, N+1):
         shortest.append(i)
 
 for i in range(1, N+1):
-    distance[str(i)] = 0
+    dist[str(i)] = 0
 
 bfs('1')
 if len(goneToNodes) >= len(graph.keys()):
@@ -61,7 +72,7 @@ else:
 l = []
 # find the distance of all the boundary nodes
 for i in shortest:
-    l.append(distance[str(i)])
+    l.append(dist[str(i)])
 
 # ignore all pages that by themselves
 for j in sorted(l):

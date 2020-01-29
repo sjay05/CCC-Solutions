@@ -1,7 +1,7 @@
 letters = ['I', 'O', 'S', 'H', 'Z', 'X', 'N']
 i = 0
 count = 0
-input = raw_input(": ")
+input = raw_input()
 
 
 while i < len(input):

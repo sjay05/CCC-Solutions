@@ -89,10 +89,10 @@ def rec(it, seq, moves):
         return False
 
     # If we visit the same number of steps + seq...
-    setup = (it, seq)
-    if setup in memoize:
-        return False
-    memoize.add(setup)
+    # setup = (it, seq)
+    # if setup in memoize:
+    #     return False
+    # memoize.add(setup)
 
     # Get rule # + (a,b) setup in form of a1 start seq, a2 end seq
     for rule, (a, b) in enumerate([(a1, b1), (a2, b2), (a3, b3)]):
