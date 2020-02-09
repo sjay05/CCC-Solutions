@@ -14,7 +14,8 @@ found a concern with any file at all, please leave an issue.
 
 ## Note:
 Some files don't work with the online CCC grader since I did not use the input
-`input()` function in some of the files and tested in my IDE itself.
+`input()` function in some of the files and tested in my IDE itself. However I will change
+this in the future.
 
 ## Contest Reference Links:
 **For information about the contest:**\
