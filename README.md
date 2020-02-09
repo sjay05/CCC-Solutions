@@ -23,7 +23,7 @@ Some files don't work with the online CCC grader since I did not use the input
 **Past Contests:** *CCC Past Contests are all the way at the bottom*
 (https://cemc.uwaterloo.ca/contests/past_contests.html)
 
-**DMOJ Online Judge** 
-You can submit solutions to CCC problems on DMOJ 24/7 with a account.
+**DMOJ Online Judge** \
+You can submit solutions to CCC problems on DMOJ 24/7 with a account.\
 (https://dmoj.ca/)
 
