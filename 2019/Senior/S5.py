@@ -17,7 +17,6 @@ def find_values(i, j):
     return max_list
 
 
-
 if __name__ == '__main__':
     n_and_k = raw_input().split()
     n = int(n_and_k[0])

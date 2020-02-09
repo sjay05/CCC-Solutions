@@ -2,25 +2,27 @@
 
 using namespace std;
 
-#define MAXN 10000
-#define Matrix vector<vector<int>>
-
-Matrix adj(MAXN);
-int dp[MAXN];
+const int MAXN = 10000;
+int N, A, B;
+vector<vector<int>> adj(MAXN);
+vector<int> arr(MAXN);
 
 int main() {
-    int n; scanf("%d", &n);
+    scanf("%d", &N);
     while (true) {
-        int x, y;
-        scanf("%d%d", &x, &y);
-        if (x == 0 and y == 0) break;
-        if (x || y) adj[x].push_back(y);
+        scanf("%d %d", &A, &B);
+        if (A == 0 && B == 0) {
+            break;
+        }
+        adj[A].push_back(B);
     }
-    dp[1] = 1;
-    for (int i = 1; i <= n; i++) {
-        for (int j : adj[i]) {
-            dp[j] += dp[i];
+
+    arr[1] = 1;
+    for (int i = 1; i <= N; i++) {
+        for (auto u : adj[i]) {
+            arr[u] += arr[i];
         }
     }
-    printf("%d\n", dp[n]);
+    printf("%d\n", arr[N]);
+
 }

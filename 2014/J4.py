@@ -16,5 +16,5 @@ for i in range(len(z)):
     for p in range(len(c)):
         final.remove(c[p])
 
-for t in range(len(final)):
-    print final 
+for c in final:
+    print c

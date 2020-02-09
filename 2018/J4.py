@@ -10,6 +10,7 @@ while True:
 
     break
 
+
 def rotate(array):
     ans = []
     for main_count in range(len(array)):
@@ -22,12 +23,13 @@ def rotate(array):
     for row in range(len(array)):
         col = len(array) - 1
         origin = 0
-        while col >= 0 and origin < len(array):
+        while col>=0 and origin<len(array):
             ans[row][origin] = array[col][row]
             origin += 1
             col -= 1
 
     return ans
+
 
 def check(matrix):
     outcome = False
@@ -47,23 +49,16 @@ def check(matrix):
     elif outcome:
         return True
 
+
 while True:
     if not check(matrix):
         x = matrix
         break
     else:
         matrix = rotate(matrix)
-        
+
 for i in x:
-	string = ""
-	for j in i:
-		string += str(j) + " "
-	print string
-
-	
-
-
-
-
-
-
+    string = ""
+    for j in i:
+        string += str(j) + " "
+    print string

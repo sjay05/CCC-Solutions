@@ -1,19 +1,34 @@
-inputs = raw_input().split()
+# Initialize the input distance between the cities
+#distance = [0, 13, 10, 12, 5]
+distance = raw_input().split()
+distance = [int(i) for i in distance]
 
-a = 0
-b = int(inputs[0])
-c = int(inputs[1])
-d = int(inputs[2])
-e = int(inputs[3])
+# Initialize some variables
+i = 0
 
-final_value = [[a, b, b+c, b+c+d, b+c+d+e], [b, a, c, c+d, c+d+e], [b+c, b, a, d, d+e], [b+c+d, d+e+c, d, a, e], [b+c+d+e, c+d+e, d+e, e, a]]
+# create the final result as a list
+result = []
 
 
-for row in final_value:
-    s = ""
-    for i in row:
-        if i != row[-1]:
-            s += str(i)+" "
+while i < len(distance):
+    row = []
+    j = 0
+    while j < len(distance):
+        if j > i:
+            # upper
+            row.append(distance[j] + row[j-1])
+        elif i > j:
+            # lower
+            row.append(result[j][i])
         else:
-            s += str(i)
-    print s 
+            # diagonal
+            row.append(0)
+
+        j += 1
+
+    result.append(row) 
+    i += 1
+
+
+for row in result:
+    print row 

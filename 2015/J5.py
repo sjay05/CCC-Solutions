@@ -1,23 +1,21 @@
-n = input()
-k = input()
-valid_strings = []
+pieces = input()
+people = input()
+
+memo = {}
+
+def pi_day(n, k, minimum):
+    if k == 1 or n == k:
+        return 1
+
+    if (n,k,minimum) in memo:
+      return memo[(n,k,minimum)]
+
+    t = 0
+    for i in range(minimum, n/k+1):
+        t += pi_day(n-i, k-1, i)
+
+    memo[(n,k, minimum)] = t
+    return t
 
 
-def pi_day(pieces, people, substring, mini):
-        if people == 1:
-            substring += str(pieces/people)
-            valid_strings.append(substring)
-            return
-
-        if people == pieces:
-            substring += str('1'*people)
-            valid_strings.append(substring)
-            return
-
-        for i in range(mini, pieces/people+1):
-            substring += str(i)
-            pi_day(pieces-i, people-1, substring, i)
-            substring = substring[:-1]
-
-pi_day(n, k, '', 1)
-print len(valid_strings)
+print pi_day(pieces, people, 1)

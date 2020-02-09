@@ -10,7 +10,7 @@ def main():
     n = input()
     while True:
         x, y = map(int, raw_input().split()) 
-        if (x == 0 and y == 0):
+        if x == 0 and y == 0:
             break
         adj[x].append(y)
     dp[1] = 1
