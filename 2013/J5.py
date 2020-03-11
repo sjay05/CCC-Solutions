@@ -20,7 +20,7 @@ def simulate(gamesLeft, pts, game, w):
     if not gamesLeft:
         for y in range(1, 5):
             if y != T:
-                if pts[y]>=pts[T]:
+                if pts[y] >= pts[T]:
                     return 0
         return 1
 
@@ -34,8 +34,8 @@ if __name__ == '__main__':
         A, B, Sa, Sb = map(int, input().split())
         if [A, B] in games:
             games.remove([A, B])
-        if Sa>Sb: points[A] += 3
-        if Sb>Sa: points[B] += 3
+        if Sa > Sb: points[A] += 3
+        if Sb > Sa: points[B] += 3
         if Sa == Sb:
             points[A] += 1
             points[B] += 1

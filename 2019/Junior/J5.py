@@ -27,7 +27,7 @@ from sys import stdin
 INPUT = stdin.readline
 
 
-# --- INPUT HANDLING ---
+# --- INPUT HANDLING ---1
 
 # --- START OF TEMPLATE ----
 def build(val, length):
