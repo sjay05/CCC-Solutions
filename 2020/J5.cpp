@@ -18,9 +18,6 @@ string bfs(pii src) {
     while (!q.empty()) {
         pii u = q.front(); q.pop();
         int r = u.f; int c = u.s;
-        if (r == 1 && c == 1) {
-            return "yes";
-        }
         for (pii v : helper[r*c]) {
             if (v.f == 1 && v.s == 1) {
                 return "yes";
