@@ -12,6 +12,8 @@
     "python.pythonPath": "/usr/bin/python",
     "python.linting.enabled": true,
     "files.associations": {
-        "ostream": "cpp"
-    }
+        "ostream": "cpp",
+        "iostream": "cpp"
+    },
+    "competitive-programming-helper.firstTime": false
 }
