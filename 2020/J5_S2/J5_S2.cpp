@@ -12,7 +12,7 @@ bool visited[1005][1005];
 vector<vector<pii>> helper(1e6+5);
 
 string bfs(pii src) {
-    queue<pii> q;
+    queue<pii> q; 
     q.push(src);
     visited[src.f][src.s] = true;
     while (!q.empty()) {
@@ -32,9 +32,8 @@ string bfs(pii src) {
 }
 
 int main() {
-    cin >> M >> N;
+    cin >> M >> N; int X;
     for (int i = 0; i < M; i++) {
-        int X;
         for (int j = 0; j < N; j++) {
             cin >> X; arr[i][j] = X;
             helper[X].push_back({i+1,j+1});

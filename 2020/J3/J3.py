@@ -17,7 +17,7 @@ for i in range(N):
         if not s and c != "\n" and c != ",":
           b += c
         if s and c != "\n" and c != ",":
-            a += c
+            a +=c 
 
     a = int(a)
     b = int(b)
