@@ -8,12 +8,13 @@
     ],
     "python.testing.pytestEnabled": false,
     "python.testing.nosetestsEnabled": false,
-    "python.testing.unittestEnabled": true,
+    "python.testing.unittestEnabled": false,
     "python.pythonPath": "/usr/bin/python",
     "python.linting.enabled": true,
     "files.associations": {
         "ostream": "cpp",
         "iostream": "cpp"
     },
-    "competitive-programming-helper.firstTime": false
+    "competitive-programming-helper.firstTime": false,
+    "python.testing.promptToConfigure": false
 }
