@@ -1,5 +1,5 @@
 /* CCC '20 S4 - Swapping Seats */
-// only partials ... (12/15) :-(
+// only partials ... (8/15) :-(
 #include <bits/stdc++.h>
 
 using namespace std;
