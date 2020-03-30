@@ -1,4 +1,4 @@
-# Problem J4
+# CCC '20 J4
 
 We start by collecting input of ```T``` and ```S```. 
 

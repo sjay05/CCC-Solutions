@@ -1,4 +1,4 @@
-# Problem J2
+# CCC '20 J2
 
 We start by getting the input of ```P, N, R``` from stdin.
 

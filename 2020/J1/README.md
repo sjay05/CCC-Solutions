@@ -1,4 +1,4 @@
-# Problem J1
+# CCC '20 J1
 
 We start by getting the input of ```S, M, L``` with stdin with the following code.
 
