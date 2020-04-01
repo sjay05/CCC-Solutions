@@ -6,7 +6,7 @@ For partial points, one can utilize the Breath First Search Algorithm and apply 
 However, the described approach is too slow, and TLE's on subtask 6 and 7 yielding a result of 11/15.
 
 ## Subtask 6 - 7:
-For the last two subtasks, the algorithm must be optiimzed. We notice that for every node, we are iterating over the whole array to find all neighbors. If the same thing is done for thousands of nodes, it will result in TLE, and a lot of operations will be repeated. We are going to maintain the value of ![](https://latex.codecogs.com/png.latex?%5Cinline%20%5Cdpi%7B100%7D%20r_i%20%5Ccdot%20c_i) in an array so to find all neighbors given a node, it will just be a O(1) operation to get an array of all neighbors.
+For the last two subtasks, the algorithm must be optiimzed. We notice that for every node, we are iterating over the whole array to find all neighbors. If the same thing is done for thousands of nodes, it will result in TLE, and a lot of operations will be repeated. We are going to maintain the value of `r*c` in an array so to find all neighbors given a node, it will just be a O(1) operation to get an array of all neighbors.
 
 Implementation of optimization can be done while reading input. 
 
