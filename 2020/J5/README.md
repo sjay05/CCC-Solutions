@@ -8,7 +8,7 @@ However, the described approach is too slow, and TLE's on subtask 6 and 7 yieldi
 ## Subtask 6 - 7:
 For the last two subtasks, the algorithm must be optiimzed. We notice that for every node, we are iterating over the whole array to find all neighbors. If the same thing is done for thousands of nodes, it will result in TLE, and a lot of operations will be repeated. We are going to maintain the value of `r*c` in an array so to find all neighbors given a node, it will just be a O(1) operation to get an array of all neighbors.
 
-Implementation of optimization can be done while reading input. 
+Implementation of optimization can be done while reading input. Also, the implementation of the faster-algorithm must be done in C++ otherwise it still TLE's.
 
 ```c++
 vector<vector<pii>> helper(1e6+5);
@@ -21,5 +21,4 @@ for (int i = 0; i < M; ++i) {
         // +1 to i & j since it is 1-indexed.
     }
 }
-
 ```
