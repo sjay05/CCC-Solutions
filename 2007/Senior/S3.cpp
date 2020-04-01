@@ -1,19 +1,20 @@
-/*===================================
-#	Author:		sjay05
-#	File:		CCC '07 S3 - Friends
-#	Desc:		Graph Theory
-===================================*/
+/*=======================================
+#	Author:		sjay05                  
+#	File:		CCC '07 S3 - Friends    
+#	Desc:		Graph Theory            
+=======================================*/
 #include <bits/stdc++.h>
 
 using namespace std;
 
 /*
 Editorial:
-Build an adj list, out of the input with 
+Build an adj list out of the input with 
 one-directional edges. For the Q queries,
-run BFS and maintain visited + dist. If not
-visited, return "no", else return dist[dest]-1,
-since "degree of seperation" starts from 0.
+run BFS and maintain visited + dist arr. If 
+not visited, return "no", else return 
+dist[dest]-1, since "degree of seperation" 
+starts from 0.
 */
 
 #define forn(i, n) for (int i = 0; i < (int)(n); ++i)
