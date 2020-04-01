@@ -2,13 +2,23 @@
 
 The challenging bit of this problem is to parse the input by the comma. 
 
-We maintain all our X'points in a array and all our Y'points in an array.
+We maintain all X and Y coordinates in respective arrays. 
 
-We notice that to find the top-right cordinate, we can find the largest ```X``` value and then ```+1``` to get the ```X``` value of the corner. As for the ```Y``` value, we find the largest ```Y``` value in our input, and ```+1```. This means our top right corner is ```[max(X)+1, max(Y)+1]```.
+There are a few properties to consider in this problem:
 
-Now ```max(X)``` means the largest  of the (X) values.
+1) The northern boundary lies just above the highest coordinate.
+2) The eastern boundary lies just right of the right-most coordinate.
+3) The southern boundary lies just below the lowest cooridinate.
+4) The western boundary lies just left of the left-most coordinate.
 
-As for the bottom left corner, the coordinates are ```[min(X)-1, min(y)-1]```.
+Using these properties we can consturct the coordinate pair of the top-right and bottom-left corner. 
+
+When I state `max(X)` or `max(Y)` it refers to the maximum of the X or Y values.
+
+Top-right corner (x,y) = `(max(X)+1, max(Y)+1)`
+
+Bottom-right corner (x,y) = `(max(X)-1, max(Y)-1)`
+
 
 
 
