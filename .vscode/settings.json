@@ -9,7 +9,7 @@
     "python.testing.pytestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.unittestEnabled": false,
-    "python.pythonPath": "/usr/bin/python",
+    "python.pythonPath": "/usr/local/bin/python3",
     "python.linting.enabled": true,
     "files.associations": {
         "ostream": "cpp",
