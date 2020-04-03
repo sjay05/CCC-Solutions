@@ -1,23 +1,10 @@
-T = raw_input()
-S = raw_input()
-
-state = False
-s = list(S)
-
-if S in T:
-    print "yes"
-
-else:
-    for i in range(len(S)):
-        x = s[0]
-        s = s[1:]
-        s.insert(len(s), x)
-        a = ""
-        for i in s: a += i
-        if a in T:
-            print "yes"
-            state = True
-            break
-
-    if not state:
-        print "no"
+t = input()
+s = input()
+cl = []
+ans = "no"
+for i in range(len(s)):
+    if s in t:
+        ans = "yes"
+        break
+    s = s[-1] + s[:-1]
+print(ans)
