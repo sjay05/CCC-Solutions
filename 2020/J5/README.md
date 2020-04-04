@@ -1,7 +1,7 @@
 # CCC '20 J5/S2 - Escape Room
 
 ## Subtask 1 - 5:
-For partial points, one can utilize the Breath First Search Algorithm and apply it to this problem. For any position `(r,c)`, we can iterate over the array to find all cells `(a,b) `. "Breadth First Search" on all neighbors, and if a neighbor is ever  ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%28M%2C%20N%29) it means that a path exists. 
+For partial points, one can utilize the Breath First Search Algorithm and apply it to this problem. For any position `(r,c)`, we can iterate over the array to find all cells `(a,b)`. "Breadth First Search" on all neighbors, and if a neighbor is ever `(M, N)` it means that a path exists. 
 
 However, the described approach is too slow, and TLE's on subtask 6 and 7 yielding a result of 11/15.
 
