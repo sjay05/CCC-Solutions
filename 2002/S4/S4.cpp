@@ -4,47 +4,7 @@
 using namespace std;
 
 /*
-This solution utilizes a dynamic programming approach.
-Two main array's are maintained, dp and group. Specifically,
-dp[i] is the optimal time for the first i people. group[i] 
-contains the length of the group with i as the last person.
-
-For each i (person), we are trying to find which group would
-be best to place in order to keep the time minimal. Since we
-are given M as the total number of people there can be in 1 
-group, we can loop over [1..M]. So we loop over [1...q] as i
-and [1...m] as j, the answer for dp[i] lies within the answer
-of dp[i-j]. However we can only place i in one of the groups.
-So we maintain a (max) variable, to check if we can place i 
-in a group that produces a smaller result. This way, we start
-by solving sub-problems and make our way up to solving the 
-whole problem. The final answer will be dp[q]. *the DP approach
-is quite similar to Longest Increasing Subsequence.
-
-For example, if our sample input is:
-2 5
-alice 1
-bob 5
-charlie 5
-dobson 3
-eric 3
-
-Our DP array will be:
-People = alice bob charlie dobson eric
-DP     =   0    1     5      6     9 
-
-
-To form the groups, we maintain a group array. group[i] 
-contains the length of the group with i as the last person.
-This is how we will build our groups:
-
-Index   =  0 1 2 3 4
-People  =  a b c d e
-group[] =  0 0 1 2 3
-
-To get the group that [e] is in, we can tell that group[e]
-is 3. This means e is in a group that starts from index(3).
-Index(3) is d. So the group for i is [group[i]...index[i]].
+For editorial refer to https://github.com/sjay05/CCC-Solutions/tree/master/2002/S4/editorial.pdf
 */
 
 #define INF INT_MAX
