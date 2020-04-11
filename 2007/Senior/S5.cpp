@@ -42,8 +42,13 @@ one to the right
 places to the right. 
 */
 
+void io() {
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+}
+
 int main() {
-  int t, n, k, w; cin >> t;
+  int t, n, k, w; cin >> t; 
   while (t--) {
     cin >> n >> k >> w;
     vector<int> arr(n), sum(n);
