@@ -13,7 +13,9 @@
     "python.linting.enabled": true,
     "files.associations": {
         "ostream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "queue": "cpp",
+        "vector": "cpp"
     },
     "competitive-programming-helper.firstTime": false,
     "python.testing.promptToConfigure": false
