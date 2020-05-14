@@ -24,4 +24,4 @@ if __name__ == '__main__':
 
     ins.sort()
     simulate()
-    print max(speeds)
+    print "%.6f" % max(speeds)
