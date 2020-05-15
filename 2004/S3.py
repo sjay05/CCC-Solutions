@@ -12,7 +12,7 @@ for n in range(10):
 
 A_ord = 65
 
-for _ in range(900):
+for _ in range(100):
     for r in range(0, 10):
         for c in range(0, 9):
             if type(arr[r][c]) == str:
