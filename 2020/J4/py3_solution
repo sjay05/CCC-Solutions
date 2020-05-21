@@ -1,0 +1,18 @@
+from collections import deque
+
+t = input()
+
+#using a stack
+s = deque([c for c in input()])
+
+flag = 'no'
+
+if ''.join(s) in t:
+    flag = 'yes'
+
+for c in range(len(s)):
+    s.appendleft(s.pop())
+    if ''.join(s) in t:
+        flag = 'yes'
+
+print(flag)
