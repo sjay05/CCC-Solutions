@@ -1,13 +1,18 @@
+from sys import stdin
+
+input = stdin.readline
+
 arr = []
 
 for n in range(10):
-    line = raw_input().split(' ')
+    line = input().split(' ')
     sub_arr = [] 
     for val in line:
         try:
             sub_arr.append(int(val))
         except Exception as e:
             sub_arr.append(val)
+            
     arr.append(sub_arr)
 
 A_ord = 65
@@ -36,4 +41,5 @@ for line in arr:
             line_str += "* "
         else:
             line_str += str(val) + " "
+
     print line_str

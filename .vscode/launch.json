@@ -25,7 +25,6 @@
             "MIMode": "lldb"
         },
 
-    
         {
             "name": "Python: Current File",
             "type": "python",

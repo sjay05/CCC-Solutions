@@ -15,10 +15,7 @@ def make_pair(a, b):
     return a, b
 
 def getN(x, y):
-    a = (x+1, y)
-    b = (x-1, y)
-    e = (x, y+1)
-    d = (x, y-1)
+    a, b, e, d = (x+1, y), (x-1, y), (x, y+1), (x, y-1)
     f = []
     for item in [a, b, e, d]:
         if 0 <= item[0] <= (r - 1):
@@ -63,4 +60,3 @@ if __name__ == '__main__':
 
     if tc == 1: print "1 room, %s square metre(s) left over" % t
     else: print "%s rooms, %s square metre(s) left over" % (tc, t)
-

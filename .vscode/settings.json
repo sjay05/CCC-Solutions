@@ -2,21 +2,28 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./2020",
+        ".",
         "-p",
         "*test.py"
     ],
     "python.testing.pytestEnabled": false,
     "python.testing.nosetestsEnabled": false,
-    "python.testing.unittestEnabled": false,
+    "python.testing.unittestEnabled": true,
     "python.pythonPath": "/usr/bin/python",
     "python.linting.enabled": true,
     "files.associations": {
+        "editor.tabCompletion": "on",
         "ostream": "cpp",
         "iostream": "cpp",
         "queue": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "map": "cpp",
+        "ios": "cpp",
+        "algorithm": "cpp"
     },
     "competitive-programming-helper.firstTime": false,
-    "python.testing.promptToConfigure": false
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.mypyEnabled": false,
+    "C_Cpp.errorSquiggles": "Disabled"
 }

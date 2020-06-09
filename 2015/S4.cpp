@@ -31,12 +31,11 @@ void dijk() {
         for (ed v : adj[u.b]) {
             int dam = u.h + v.h;
             if (dam < k && u.t + v.t < dist[v.b][dam]) {
-                    dist[v.b][dam] = u.t + v.t;
-                    q.push({v.b, u.t+v.t, dam});
+                dist[v.b][dam] = u.t + v.t;
+                q.push({v.b, u.t+v.t, dam});
             }
         }
     }
-
 }
 
 int main() {
@@ -51,8 +50,7 @@ int main() {
         adj[b].push_back({a, t, h});
     }
 
-    cin >> sr >> de; 
-    dijk();
+    cin >> sr >> de; dijk();
 
     int min_el = INT_MAX;
     for (int i = 0; i <= k; i++) {

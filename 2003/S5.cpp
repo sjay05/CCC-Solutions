@@ -47,7 +47,6 @@ int MST() {
             }
             merge(e.u, e.v);
         }
-
     }
     return 0;
 }
