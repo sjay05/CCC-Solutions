@@ -1,3 +1,5 @@
+# (9 / 15) - WA Code
+
 input = raw_input()
 min_from_hour = int(input[0]+input[1])*60
 min_from_min = int(input[3] + input[4])
@@ -37,14 +39,3 @@ else:
             print '0' + str(hour) + ":" + str(new_min)
         else:
             print str(hour) + ":" + str(new_min)
-
-
-
-
-
-
-
-
-
-
-

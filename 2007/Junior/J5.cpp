@@ -1,35 +1,46 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
-int A, B, N;
-vector<int> hotels = {0, 990, 1010, 1970, 2030, 2940, 3060, 
-                 3930, 4060, 4970, 5030, 5990, 6010, 7000};
+#define forn(i,l,r) for (int i=(l); i<(r); ++i)
+#define sz(x) (int)(x).size()
+#define dbg(x) cout << (#x) << ' ' << (x) << endl
+#define str string
 
+typedef long long int64;
+typedef vector<int> vec_i;
+typedef vector<int64> vec_ll;
+typedef pair<int,int> pii;
 
-int find_paths(int n, int i) {
-    int paths = 0;
-    if (n >= 7000) {
-        return 1;
+const int MOD = 1000000007;
+const int INF = 0x3f3f3f3f;
+
+/*-------- CONSTANTS --------*/
+
+int64 A, B, M, dp[100];
+vector<int> pos = {0, 990, 1010, 1970, 2030, 2940, 3060, \
+                3930, 4060, 4970, 5030, 5990, 6010, 7000};
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    cin >> A >> B >> M;
+    if (M != 0) {
+        for (int i = 1; i <= M; i++) {
+            int x; cin >> x;
+            pos.push_back(x);
+        }
     }
-
-    else {
-        for (int x = i+1; x < hotels.size(); x++) {
-            if (hotels[x] - n >= A && hotels[x] - n <= B) {
-                paths += find_paths(hotels[x], x);
-            } else if (hotels[i] - n > B) {
-                break;
+    memset(dp, 0, sizeof dp);
+    sort(pos.begin(), pos.end()); dp[0] = 1;
+    for (int i = 1; i < sz(pos); i++) {
+        for (int j = i-1; j >= 0; j--) {
+            int dif = pos[i]-pos[j];
+            if (dif >= A && dif <= B) {
+                dp[i] += dp[j];
             }
         }
     }
-    return paths;
-}
-
-int main() {
-    scanf("%d\n%d\n%d", &A, &B, &N);
-    while (N--) {
-        int x; scanf("%d", &x);
-        hotels.push_back(x);
-    }
-    sort(hotels.begin(), hotels.end());
-    printf("%d\n", find_paths(0, 0));
+    cout << dp[sz(pos)-1] << "\n";
 }

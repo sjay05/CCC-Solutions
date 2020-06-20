@@ -1,5 +1,5 @@
 /*
-TLE - 20/100 - Wrong Code
+TLE - 20/100 (Doesn't Pass All Test Cases)
 */
 #include <bits/stdc++.h>
 
@@ -22,7 +22,7 @@ void dijk(int u) {
     vis[u] = true; // mark true
     for (int _m = 1; _m <= n; _m++) {
         if (!vis[_m]) {
-            if (dist[u] + adj[u][_m] < dist[_m]) 
+            if (dist[u] + adj[u][_m] < dist[_m])
                 // only if < inf
                 dist[_m] = dist[u] + adj[u][_m];
         }
@@ -33,10 +33,10 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    cin >> n >> t; 
+    cin >> n >> t;
     for (int i = 0; i < t; i++) {
         int x, y, co; cin >> x >> y >> co;
-        // bi-direct    
+        // bi-direct
         adj[x][y] = co;
         adj[y][x] = co;
     }
@@ -50,7 +50,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         int u_v = 0; // pick arbitrary node unvis
         for (int no = 1; no <= n; no++) {
-            if (!vis[no] && dist[no] < dist[u_v]) 
+            if (!vis[no] && dist[no] < dist[u_v])
                 // not vis and less dist (!inf)
                 u_v = no;
         }

@@ -1,20 +1,26 @@
-n = 0
-array = []
-while n < 4:
-    x = raw_input()
-    array.append(x)
-    n = n + 1
+ins = []
 
-x = len(array) - 2
-for i in range(1, (len(array)/2)+1):
-    if x == 0 and array[x] == "R":
-        print "Turn LEFT into your HOME."
-    elif x == 0 and array[x] == "L":
-        print "Turn RIGHT into your HOME."
-    elif array[x] == "R":
-        print "Turn %s onto %s street." % ("LEFT", array[x-1])
+while True:
+  i = raw_input()
+  if i == "SCHOOL":
+    break
+  else:
+    ins.append(i)
+
+ins.reverse()
+i = 0
+while True:
+  if i == len(ins)-1:
+    if ins[i] == "R":
+      print "Turn LEFT into your HOME."
     else:
+      print "Turn RIGHT into your HOME."
+    break
 
-        print "Turn %s onto %s street." % ("RIGHT", array[x-1])
+  else:
+    if ins[i] == "R":
+      print "Turn LEFT onto %s street." % ins[i+1]
+    else:
+      print "Turn RIGHT onto %s street." % ins[i+1]
 
-    x -= 2
+  i += 2

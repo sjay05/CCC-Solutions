@@ -1,30 +1,21 @@
 # CCC SOLUTIONS
 
-## Info
-These are solutions written by me for the Canadian Computing Competition. Python2 is
-language being used to write all the solutions. All of the years cover the Junior
-division solutions of the CCC contest.
+# Info
+These are solutions to the CCC contest written in either Python 2/3 or C++. Python is used for most of the junior problems (J1, J2, J3, J4). Some problems do not earn full points on official test cases and they are in progress.
+
 
 ## Contribute
-If you would like to contribute, such as submitting a solution to a CCC question
-(Junior or Senior), please submit a **pull request**. However for the pull request
-to be accepted, I prefer the language to either be **Python (2 or 3) or C++** and it has to pass
-on the official CCC grader and/or the DMOJ judge. If you have
-found a concern with any file at all, please leave an issue.
+Contributions to failing code or new problems are welcome. It would be preferred for the language to be Python 2/3 or C++. Before being added it will be tested with official test data.
 
-## Note:
-Some files don't work with the online CCC grader since I did not use the input
-`input()` function in some of the files and tested in my IDE itself. However I will change
-this in the future.
 
-## Contest Reference Links:
+## Links/References
+
 **For information about the contest:**\
 (https://cemc.uwaterloo.ca/contests/computing.html)
 
 **Past Contests:** \*CCC Past Contests are all the way at the bottom*
 (https://cemc.uwaterloo.ca/contests/past_contests.html)
 
-**DMOJ Online Judge** \
+**DMOJ Online Judge:** \
 You can submit solutions to CCC problems on DMOJ 24/7 with a account.\
 (https://dmoj.ca/)
-
