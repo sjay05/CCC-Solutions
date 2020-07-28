@@ -1,3 +1,6 @@
+"""
+ *    author:  sjay05
+"""
 values = []
 val_count = 0
 while val_count < 6:
@@ -23,4 +26,3 @@ elif A > B:
     print "A"
 else:
     print "B"
-

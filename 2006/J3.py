@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 data = []
 while True:
     x = raw_input()
@@ -21,5 +24,3 @@ for i in range(0, len(data)):
         else:
             count += len(values[word[x]])
     print count
-
-

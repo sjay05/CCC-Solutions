@@ -1,3 +1,7 @@
+"""
+author: sjay05
+"""
+
 a = input()
 b = input()
 c = input()

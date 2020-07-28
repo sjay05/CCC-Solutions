@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 n = input()
 arr = []
 for i in range(int(n)-1):

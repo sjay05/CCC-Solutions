@@ -1,8 +1,11 @@
+/**
+ *    author:  sjay05
+**/
 #include <bits/stdc++.h>
 
 using namespace std;
 
-#define forn(i,l,r) for (int i=(l); i<(r); ++i) 
+#define forn(i,l,r) for (int i=(l); i<(r); ++i)
 #define sz(x) (int)(x).size()
 #define dbg(x) cout << (#x) << ' ' << (x) << "\n"
 #define str string

@@ -1,3 +1,6 @@
+/**
+ *    author:  sjay05
+**/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -11,7 +14,7 @@ int main() {
     scanf("%d", &b2);
     scanf("%d", &b1);
     int a_total, b_total;
-    a_total = a3*3 + a2*2 + a1;  
+    a_total = a3*3 + a2*2 + a1;
     b_total = b3*3 + b2*2 + b1;
     if (a_total == b_total) printf("T\n");
     if (a_total > b_total) printf("A\n");

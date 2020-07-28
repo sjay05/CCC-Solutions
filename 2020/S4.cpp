@@ -1,3 +1,8 @@
+/**
+ *    author:  sjay05
+**/
+
+
 /* CCC '20 S4 - Swapping Seats */
 // only partials ... (8/15) :-(
 #include <bits/stdc++.h>
@@ -10,7 +15,7 @@ constexpr const char sp = ' ';
 #define f first
 #define s second
 
-string seq; 
+string seq;
 int Ca; // # of A's
 
 pii get_range(int i) {
@@ -22,13 +27,13 @@ pii get_range(int i) {
 }
 
 int main() {
-    cin >> seq; 
+    cin >> seq;
     vector<int> psaB((int) seq.size(), 0);
     for (int c = 0; c < (int) seq.size(); c++) {
         if (seq[c] == 'A') Ca++;
         if (c == 0 && seq[c] == 'B')
             psaB[0] = 1;
-        else if (seq[c] == 'B') 
+        else if (seq[c] == 'B')
             psaB[c] = psaB[c-1] + 1;
         else
             psaB[c] = psaB[c-1];

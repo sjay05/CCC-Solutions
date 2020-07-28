@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 inputs = []
 output = ["A", "B", "C", "D", "E"]
 while True:
@@ -38,4 +41,3 @@ for pair in inputs:
 
 for i in output:
     print i,
-

@@ -1,4 +1,7 @@
-// Iterative Approach 
+/**
+ *    author:  sjay05
+**/
+// Iterative Approach
 // Works on DMOJ and Official CCC Grader
 
 #include <bits/stdc++.h>

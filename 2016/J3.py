@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 s = raw_input()
 lengths = []
 

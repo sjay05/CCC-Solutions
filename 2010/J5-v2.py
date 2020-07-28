@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 import Queue
 q = Queue.Queue()
 
@@ -20,7 +23,7 @@ def check(tup):
     if x >= 1 and x <= 8:
         if y >= 1 and y <= 8:
             return True
-    
+
     return False
 
 def get_neighbors(node):
@@ -39,9 +42,9 @@ def get_neighbors(node):
     for i in templ:
         if check(i):
             final.append(i)
-    
+
     return final
-    
+
 
 def bfs(node):
     visited.append(node)

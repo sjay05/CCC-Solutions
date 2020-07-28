@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 from sys import stdin
 from Queue import Queue
 input = stdin.readline
@@ -7,7 +10,7 @@ Algorithm Outline:
 - We want to check if we can get from A to B with edge (e)
 removed. If no, then this is a DISCONNECTING ROAD. We can use
 BFS or DFS to check if B exists in visited arr when DFS or BFS
-initiated from A. 
+initiated from A.
 """
 
 adj = {chr(i): [] for i in range(65, 90 + 1)}

@@ -1,4 +1,7 @@
 """
+author: sjay05
+"""
+"""
 DP/Graph Theory - S4 (Waterpark)
 """
 
@@ -8,8 +11,9 @@ dp = [0] * MAXN
 
 def main():
     n = input()
+
     while True:
-        x, y = map(int, raw_input().split()) 
+        x, y = map(int, raw_input().split())
         if x == 0 and y == 0:
             break
         adj[x].append(y)

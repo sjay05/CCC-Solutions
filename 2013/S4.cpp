@@ -1,3 +1,6 @@
+/**
+ *    author:  sjay05
+**/
 /* CCC '13 S4 - Who is Taller? */
 #include <bits/stdc++.h>
 

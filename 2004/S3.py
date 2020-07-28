@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 from sys import stdin
 
 input = stdin.readline
@@ -6,13 +9,13 @@ arr = []
 
 for n in range(10):
     line = input().split(' ')
-    sub_arr = [] 
+    sub_arr = []
     for val in line:
         try:
             sub_arr.append(int(val))
         except Exception as e:
             sub_arr.append(val)
-            
+
     arr.append(sub_arr)
 
 A_ord = 65
@@ -30,7 +33,7 @@ for _ in range(100):
                         break
                     else:
                         res += arr[row][col]
-                
+
                 if not invalid:
                     arr[r][c] = int(res)
 

@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 # Initializing 3 by 3 matrix
 magic_inputs = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 
@@ -35,14 +38,3 @@ if len(set(row_sum)) == 1 and len(set(col_sum)) == 1:
     print "Magic"
 else:
     print "Not Magic"
-
-
-
-
-
-
-
-
-
-
-

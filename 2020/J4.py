@@ -1,3 +1,6 @@
+"""
+author: sjay05, Arden144
+"""
 t = input()
 s = input()
 cl = []

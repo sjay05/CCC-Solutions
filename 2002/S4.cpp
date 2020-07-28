@@ -1,3 +1,6 @@
+/**
+ *    author:  sjay05
+**/
 /* CCC '02 S4 - Bridge Crossing */
 #include <bits/stdc++.h>
 
@@ -35,9 +38,9 @@ int main() {
     while (i > 0) {
         int c = g[i];
         vector<string> a;
-        for (int x = (c + 1); x < (i + 1); x++) 
+        for (int x = (c + 1); x < (i + 1); x++)
             a.push_back(name[x]);
-        
+
         groups.push_back(a);
         i = c;
     }

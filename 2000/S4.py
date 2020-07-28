@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 metres = input()
 clubs = input()
 club_sizes = []

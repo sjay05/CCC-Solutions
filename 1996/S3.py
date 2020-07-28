@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 def pattern_generator(n, k, s):
     if n == 0 and k == 0:
         print s
@@ -22,5 +25,3 @@ if __name__ == '__main__':
         n = int(all_inputs[i][0])
         k = int(all_inputs[i][1])
         pattern_generator(n, k, "")
-
-

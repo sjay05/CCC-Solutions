@@ -1,3 +1,6 @@
+/**
+ *    author:  DynamicSquid
+**/
 #include <iostream>
 #include <sstream>
 #include <cmath>
@@ -27,12 +30,12 @@ int main()
         int num;
         cin >> num;
         num *= 2;
-        
+
         for (int b = 3; b <= num / 2; b += 2)
         {
             if (!isPrime(b) || !isPrime(num - b))
                 continue;
-            
+
             result << b << ' ' << num - b << '\n';
             break;
         }

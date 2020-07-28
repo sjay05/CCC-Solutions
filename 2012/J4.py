@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 K = input()
 word = raw_input()
 new_word = ""

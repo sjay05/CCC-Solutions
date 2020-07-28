@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 inputs = []
 while True:
     x = raw_input()
@@ -15,8 +18,8 @@ for n in inputs:
         if a != -1:
             n = n.replace("ANA", "A")
         if b != -1:
-            n = n.replace("BAS", "A") 
-    
+            n = n.replace("BAS", "A")
+
     if n == "A":
         print "YES"
     else:

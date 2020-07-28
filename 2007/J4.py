@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 word1 = raw_input()
 word2 = raw_input()
 
@@ -10,4 +13,3 @@ else:
         print "It is a anagram."
     else:
         print "It is not a anagram."
-

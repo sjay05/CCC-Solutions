@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 # (9 / 15) - WA Code
 
 input = raw_input()

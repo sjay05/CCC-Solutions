@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 # Define vowels ascii list
 vowels = [97, 101, 105, 111, 117]
 
@@ -26,7 +29,7 @@ This function will return the next
 consonant character.
 """
 def find_next_consonant(consonant):
-    if consonant == 122: 
+    if consonant == 122:
         return "z"
     cons_index = consonants.index(consonant)
     return chr(consonants[cons_index + 1])

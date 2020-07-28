@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 i = 0
 num = input()
 votes = raw_input()

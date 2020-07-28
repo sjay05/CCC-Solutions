@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 num = input()
 first_line = raw_input().rsplit()
 second_line = raw_input().rsplit()

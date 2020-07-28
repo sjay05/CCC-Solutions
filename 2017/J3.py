@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 # a = input("a-value?")
 # b = input("b-value?")
 # c = input("c-value?")
@@ -22,4 +25,3 @@ def can_drive(a, b, c, d, t):
 
 answer = can_drive(a, b, c, d, t)
 print answer
-        

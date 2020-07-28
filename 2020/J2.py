@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 P = input()
 N = input()
 R = input()
