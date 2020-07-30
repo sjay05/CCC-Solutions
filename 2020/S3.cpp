@@ -49,11 +49,11 @@ int main() {
   cin.tie(0);
   cin >> n >> h;
   ht.init(h);
-  for (int i = 0; i < n.size(); i++) {
+  for (int i = 0; i < (int) n.size(); i++) {
     int ch = n[i] - 'a';
     fn[ch]++;
   }
-  for (int i = 0; i < n.size(); i++) {
+  for (int i = 0; i < (int) n.size(); i++) {
     int ch = h[i] - 'a';
     fh[ch]++;
   }
