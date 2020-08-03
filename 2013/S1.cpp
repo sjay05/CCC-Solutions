@@ -1,3 +1,6 @@
+/**
+ *    author:  sjay05
+**/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -28,7 +31,7 @@ int main() {
         for (int i = 0; i < sz(s); i++) {
             for (int j = i+1; j < sz(s); j++) {
                 if (s[j] == s[i]) ft = true;
-                else continue; 
+                else continue;
             }
         }
         if (!ft) {

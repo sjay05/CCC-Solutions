@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 pieces = input()
 people = input()
 

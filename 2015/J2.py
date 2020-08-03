@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 input = raw_input()
 
 def Happy_or_Sad(input):

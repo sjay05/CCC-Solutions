@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 # --- INPUT HANDLING ---
 from sys import stdin
 

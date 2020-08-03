@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 weight = input()
 height = input()
 BMI = weight/(height * height)

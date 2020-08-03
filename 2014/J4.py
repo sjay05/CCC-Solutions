@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 K = input()
 m = input()
 z = []

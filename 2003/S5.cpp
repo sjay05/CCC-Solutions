@@ -1,3 +1,6 @@
+/**
+ *    author:  sjay05
+**/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -13,7 +16,7 @@ bool cmp (ed &a, ed &b) {
     return a.w > b.w;
 }
 
-int c, r, d; 
+int c, r, d;
 vector<ed> edges;
 vector<int> id(10001);
 vector<bool> dest(10001);
@@ -57,10 +60,10 @@ int main() {
         id[ci] = ci;
     }
     while (r--) {
-        int u, v, w; 
+        int u, v, w;
         scanf("%i%i%i",&u,&v,&w);
         edges.push_back({u, v, w});
-    }    
+    }
     sort(edges.begin(), edges.end(), cmp);
     for (int i = 0; i < d; i++) {
         int x; scanf("%i",&x);

@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 x = input()
 y = input()
 z = input()

@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 a = input()
 b = input()
 c = input()
@@ -29,5 +32,3 @@ elif sum_for_nikky > sum_for_byron:
     print "Nikky"
 elif sum_for_nikky == sum_for_byron:
     print "Tied"
-
-

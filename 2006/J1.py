@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 burger = input()
 side = input()
 drink = input()
@@ -10,4 +13,3 @@ dessert_choice = {1: 167, 2: 266, 3: 75, 4: 0}
 
 total_sum = burger_choice[burger] + drink_choice[drink] + side_choice[side] + dessert_choice[dessert]
 print "Your total Calorie amount is %s" %total_sum
-

@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 letters = ['I', 'O', 'S', 'H', 'Z', 'X', 'N']
 i = 0
 count = 0
@@ -15,4 +18,3 @@ if count == len(input):
     print "YES"
 else:
     print "NO"
-

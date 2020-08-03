@@ -5,7 +5,7 @@ These are solutions to the CCC contest written in either Python 2/3 or C++. Pyth
 
 
 ## Contribute
-Contributions to failing code or new problems are welcome. It would be preferred for the language to be Python 2/3 or C++. Before being added it will be tested with official test data.
+Contributions to failing code or new problems are welcome. It would be preferred for the language to be Python 2/3 or C++. Before being added it will be tested with official test data. The name of the author will be listed on the file.
 
 
 ## Links/References

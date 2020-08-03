@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 value = input()
 i = 0
 while True:
@@ -6,6 +9,3 @@ while True:
         break
     else:
         i += 1
-
-
-

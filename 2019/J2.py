@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 main = input()
 c = 0
 list = []

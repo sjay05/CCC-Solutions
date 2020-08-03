@@ -1,3 +1,7 @@
+"""
+author: sjay05
+"""
+
 # Initialize the input distance between the cities
 #distance = [0, 13, 10, 12, 5]
 distance = raw_input().split()
@@ -26,9 +30,9 @@ while i < len(distance):
 
         j += 1
 
-    result.append(row) 
+    result.append(row)
     i += 1
 
 
 for row in result:
-    print row 
+    print row

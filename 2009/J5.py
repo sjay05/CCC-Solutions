@@ -1,10 +1,13 @@
+"""
+author: sjay05
+"""
 # 2009 J5 - Graph Theory Using Python 2.7
 """
 Algorithm: BFS and ADJ LIST Graph Representation
 
 Operations [i, d, n, f] can be obtained from ADJ LIST.
 
-For operation [s], run BFS by maintaining the distance from src vertex. Mantain visited and distance. 
+For operation [s], run BFS by maintaining the distance from src vertex. Mantain visited and distance.
 
 For operation [f], run 2 nested loops to find friends of "friends". Maintain these nodes in a set, because nodes might reoccur.
 """

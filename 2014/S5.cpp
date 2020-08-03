@@ -1,3 +1,6 @@
+/**
+ *    author:  sjay05
+**/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -9,7 +12,7 @@ int main() {
         scanf("%i%i", &pts[i].first, &pts[i].second);
     }
     vector< pair< int,pair<int,int> > > gs;
-    vector<int> dp(N+1), mtain(N+1), dist(N+1); 
+    vector<int> dp(N+1), mtain(N+1), dist(N+1);
     for (int x = 0; x <= N; x++) {
         for (int y = x+1; y <= N; y++) {
              int diff_x = pts[x].first - pts[y].first;

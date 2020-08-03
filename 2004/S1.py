@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 N = input()
 collections = []
 

@@ -1,3 +1,6 @@
+/**
+ *    author:  DynamicSquid
+**/
 #include <iostream>
 #include <string>
 

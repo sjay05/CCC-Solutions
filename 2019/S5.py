@@ -1,3 +1,7 @@
+"""
+author: sjay05
+"""
+
 # CCC '19 S5 - Triangle: The Data Structure
 # Doesn't work for larger input
 

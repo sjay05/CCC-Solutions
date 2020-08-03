@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 x = int(raw_input())
 
 count = 0

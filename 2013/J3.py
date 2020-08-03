@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 x = input()
 a = 0
 
@@ -33,5 +36,3 @@ else:
             break
         else:
             a += 1
-
-

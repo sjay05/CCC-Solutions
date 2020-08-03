@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 n = input()
 rounds = []
 for i in range(n):
@@ -21,4 +24,3 @@ while i <= len(rounds) - 2:
 
 print antonia
 print david
-

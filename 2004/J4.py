@@ -1,3 +1,7 @@
+"""
+author: sjay05
+"""
+
 # Keyword
 a = raw_input()
 # String

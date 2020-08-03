@@ -1,3 +1,6 @@
+"""
+author: sjay05, Arden144
+"""
 n = int(input())
 x, y = [], []
 for _ in range(n):

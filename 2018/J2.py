@@ -1,3 +1,7 @@
+"""
+author: sjay05
+"""
+
 n = raw_input()
 a = raw_input()
 b = raw_input()

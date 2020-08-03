@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 h = input()
 M = input()
 
@@ -11,4 +14,3 @@ if A > 0:
 else:
     print "The balloon first touches ground at hour:"
     print t
-

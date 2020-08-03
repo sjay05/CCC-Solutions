@@ -1,3 +1,7 @@
+"""
+author: sjay05
+"""
+
 # Messy Version of 2019 J4
 grid = [[1, 2],[3, 4]]
 
@@ -45,4 +49,3 @@ for d in range(len(grid)):
         final_string += str(temp)
         final_string += " "
     print final_string
-

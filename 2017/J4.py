@@ -1,4 +1,6 @@
-
+"""
+author: sjay05
+"""
 D = input()
 
 def simulate_time(hour, minute, time_str, value):
@@ -49,4 +51,3 @@ def choose_hour(hour):
 
 
 print simulate_time(12, 0, "", 0)
-

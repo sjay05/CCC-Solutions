@@ -1,5 +1,7 @@
+"""
+author: sjay05
+"""
 import Queue
-
 
 # --- START OF Templates ----
 def build(val, length):

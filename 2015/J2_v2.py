@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 input = "One :-( of :-) each."
 
 i = 0
@@ -25,4 +28,3 @@ elif sad == 0 and hap == 0:
     print "none"
 elif sad == hap:
     print "unsure"
-

@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 x = input()
 y = input()
 
@@ -12,4 +15,3 @@ def find_quadrant(x, y):
         return "4"
 
 print find_quadrant(x, y)
-

@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 # Canadian Computing Competition: 2011 Stage 1, Senior #2
 
 lines = int(input())

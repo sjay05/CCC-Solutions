@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 T = raw_input()
 S = raw_input()
 
@@ -18,9 +21,6 @@ else:
             print "yes"
             state = True
             break
-    
+
     if not state:
         print "no"
-
-
-    

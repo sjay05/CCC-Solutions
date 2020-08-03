@@ -1,4 +1,8 @@
-# Clean version of 2019 J4 
+"""
+author: sjay05
+"""
+
+# Clean version of 2019 J4
 from sys import stdin
 
 input = stdin.readline

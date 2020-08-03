@@ -1,3 +1,6 @@
+"""
+author: sjay05
+"""
 # CCC '03 - S3 / J5 - Floor Plan (GRAPH THEORY)
 
 from sys import stdin
