@@ -1,7 +1,7 @@
-"""
-author: DynamicSquid
-"""
-
+/**
+ * author: DynamicSquid
+ * date:   04-Aug-20 2:33:11 pm
+ */
 #include <iostream>
 #include <vector>
 
