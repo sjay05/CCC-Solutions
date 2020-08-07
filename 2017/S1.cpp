@@ -17,16 +17,16 @@ int main()
 
 	for (int a = 0; a < N; ++a)
 	{
-		int i;
-		cin >> i;
-		team1[a] = i;
+		int num;
+		cin >> num;
+		team1[a] = num;
 	}
 
 	for (int a = 0; a < N; ++a)
 	{
-		int i;
-		cin >> i;
-		team2[a] = i;
+		int num;
+		cin >> num;
+		team2[a] = num;
 	}
 
 	int K = 0;
