@@ -1,3 +1,7 @@
+/*
+author: DynamicSquid
+*/
+
 #include <iostream>
 #include <vector>
 
