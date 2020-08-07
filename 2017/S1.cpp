@@ -1,6 +1,13 @@
-/*
-author: DynamicSquid
-*/
+/* CCC 2017 Senior 1: Sum Game
+ * author: DynamicSquid
+ *
+ * The solution below uses a simple linear search with
+ * O(n) time complexity.
+ *
+ * The two teams' scores are first stored in two arrays,
+ * then a linear search is done on both arrays comparing
+ * their scores.
+ */
 
 #include <iostream>
 #include <vector>
