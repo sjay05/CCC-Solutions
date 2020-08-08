@@ -1,5 +1,5 @@
   
-/* CCC 2017 Senior 1: Tandem Bicycle
+/* CCC 2016 Senior 2: Tandem Bicycle
  * author: DynamicSquid
  *
  * If we start with the slowest speed, we can get that
