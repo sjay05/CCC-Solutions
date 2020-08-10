@@ -23,7 +23,7 @@ int main()
     int letters2[26] = { 0 };
 
     int wild = 0;
-    for (int a = 0; a < str1.length(); ++a)
+    for (int a = 0; a < (int) str1.length(); ++a)
     {
         if (str2[a] == '*')
             wild += 1;

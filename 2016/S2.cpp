@@ -1,4 +1,4 @@
-  
+
 /* CCC 2016 Senior 2: Tandem Bicycle
  * author: DynamicSquid
  *
@@ -60,8 +60,8 @@ int main()
         reverse(city1.begin(), city1.end());
 
     int speed = 0;
-    for (int a = 0; a < city1.size(); ++a)
+    for (int a = 0; a < (int) city1.size(); ++a)
         speed += max(city1[a], city2[a]);
-    
+
     cout << speed;
 }
