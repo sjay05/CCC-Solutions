@@ -1,46 +1,49 @@
 /**
- *    author:  sjay05
-**/
+ * author: sanjay
+ * date:   2020-08-10 T13:04:54-04:00
+ */
 #include <bits/stdc++.h>
 
 using namespace std;
 
-#define f first
-#define s second
-typedef pair<int,int> pii;
+typedef long long ll;
+typedef vector<pair<int,int>> vpii;
 
-int N, M;
-int arr[1005][1005];
-bool visited[1005][1005];
-vector<vector<pii>> helper(1e6+5);
-
-string bfs(pii src) {
-    queue<pii> q;
-    q.push(src);
-    visited[src.f][src.s] = true;
-    while (!q.empty()) {
-        pii u = q.front(); q.pop();
-        int r = u.f; int c = u.s;
-        for (pii v : helper[r*c]) {
-            if (v.f == 1 && v.s == 1) {
-                return "yes";
-            }
-            if (!visited[v.f][v.s]) {
-                visited[v.f][v.s] = true;
-                q.push(v);
-            }
-        }
-    }
-    return "no";
-}
+const int mn = 1005;
+int arr[mn][mn];
+bool vis[mn][mn];
+vector<vpii> help(1e6 + 5);
 
 int main() {
-    cin >> M >> N; int X;
-    for (int i = 0; i < M; i++) {
-        for (int j = 0; j < N; j++) {
-            cin >> X; arr[i][j] = X;
-            helper[X].push_back({i+1,j+1});
-        }
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+  int n, m;
+  cin >> m >> n;
+  for (int i = 0; i < m; i++) {
+    for (int j = 0; j < n; j++) {
+      int x; cin >> x;
+      arr[i][j] = x;
+      help[x].push_back({i + 1, j + 1});
     }
-    cout << bfs({N, M}) << endl;
+  }
+  queue<pair<int,int>> q;
+  q.push({n, m});
+  vis[n][m] = true;
+  while (!q.empty()) {
+    auto u = q.front();
+    q.pop();
+    int r = u.first;
+    int c = u.second;
+    for (auto v : help[r * c]) {
+      if (v.first == 1 && v.second == 1) {
+        cout << "yes\n";
+        return 0;
+      } if (!vis[v.first][v.second]) {
+        vis[v.first][v.second] = true;
+        q.push(v);
+      }
+    }
+  }
+  cout << "no\n";
+  return 0;
 }
