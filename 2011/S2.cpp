@@ -1,4 +1,4 @@
-/* CCC 2011 Senior 2: Sum Game
+/* CCC 2011 Senior 2: Multiple Choice
  * author: DynamicSquid
  */
  
