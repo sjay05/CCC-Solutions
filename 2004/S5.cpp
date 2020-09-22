@@ -1,3 +1,7 @@
+/*
+ *  author:  sjay05
+ *  created: 21.09.20 21:58:56
+ */
 #include <cmath>
 #include <functional>
 #include <fstream>
@@ -49,7 +53,6 @@ auto create(size_t head, Args&&... tail) {
   auto inner = create<T>(tail...);
   return vector<decltype(inner)>(head, inner);
 }
-
 
 int main() {
   ios::sync_with_stdio(0);
