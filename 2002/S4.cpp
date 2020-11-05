@@ -1,14 +1,9 @@
 /**
  *    author:  sjay05
 **/
-/* CCC '02 S4 - Bridge Crossing */
 #include <bits/stdc++.h>
 
 using namespace std;
-
-/*
-For editorial refer to https://github.com/sjay05/CCC-Solutions/tree/master/2002/S4/editorial.pdf
-*/
 
 #define INF INT_MAX
 
