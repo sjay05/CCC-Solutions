@@ -1,84 +1,52 @@
-/**
- *    author:  sjay05
- *    created: Thu 4:20PM 2020
-**/
+/*
+ *    author:  DynamicSquid
+ *    created: December 5th, 2020
+ */
 
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <string>
+#include <unordered_map>
+#include <set>
 using namespace std;
 
-typedef long long ll;
+bool match(unordered_map<char, int>& p1, unordered_map<char, int>& p2)
+{
+    string alpha = "abcdefghijklmnopqrstuvwxyz";
+    for (char ch : alpha)
+    {
+        if (p1[ch] != p2[ch])
+            return false;
+    }
 
-const ll mod = 972663749, mod2 = 972663749;
-const ll base = 31, base2 = 131;
+    return true;
+}
 
-struct PolyHash {
-  vector<ll> p, p2, h, h2;
+int main()
+{
+    string N, H;
+    cin >> N >> H;
 
-  void init(string s) {
-    p.resize(s.size() + 1);
-    p2.resize(s.size() + 1);
-    h.resize(s.size() + 1);
-    h2.resize(s.size() + 1);
-    p[0] = 1; p2[0] = 1;
-    int n = (int) s.size();
-    for (int i = 1; i <= n; i++) {
-      p[i] = p[i - 1] * base % mod;
-      p2[i] = p2[i - 1] * base2 % mod2;
-    }
-    h[0] = s[0] - 'a' + 1;
-    h2[0] = s[0] - 'a' + 1;
-    for (int i = 1; i < n; i++) {
-      h[i] = (h[i - 1] * base % mod + (s[i] - 'a' + 1)) % mod;
-      h2[i] = (h2[i - 1] * base2 % mod2 + (s[i] - 'a' + 1)) % mod2;
-    }
-  }
-  pair<ll,ll> get(int i, int j) {
-    if (i == 0) {
-      return {h[j], h2[j]};
-    } else {
-      ll v1 = (h[j] - h[i - 1] * p[j - (i - 1)] % mod + mod) % mod;
-      ll v2 = (h2[j] - h2[i - 1] * p2[j - (i - 1)] % mod2 + mod2) % mod2;
-      return {v1, v2};
-    }
-  }
-};
+    unordered_map<char, int> nperm;
+    for (char ch : N)
+        nperm[ch]++;
 
-string n, h;
-PolyHash ht;
-set<pair<ll,ll>> st;
-int fn[26], fh[26];
+    unordered_map<char, int> hperm;
+    set<size_t> perms;
 
-int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(0);
-  cin >> n >> h;
-  ht.init(h);
-  for (int i = 0; i < (int) n.size(); i++) {
-    int ch = n[i] - 'a';
-    fn[ch]++;
-  }
-  for (int i = 0; i < (int) n.size(); i++) {
-    int ch = h[i] - 'a';
-    fh[ch]++;
-  }
-  int en = h.size() - n.size();
-  for (int i = 0; i + n.size() <= h.size(); i++) {
-    bool perm = true;
-    for (int c = 0; c < 26; c++) {
-      if (fn[c] != fh[c]) {
-        perm = false;
-        break;
-      }
+    for (int a = 0; a < H.length(); ++a)
+    {
+        hperm[H[a]]++;
+        if (a >= N.length() - 1)
+        {
+            if (match(nperm, hperm))
+            {
+                hash<string> h;
+                perms.insert(h(H.substr(a - N.length() + 1, N.length())));
+            }
+
+            hperm[H[a - N.length() + 1]]--;
+        }
     }
-    if (perm) {
-      st.insert(ht.get(i, i + n.size() - 1));
-    }
-    if (i != en) {
-      int ch1 = h[i + n.size()] - 'a';
-      int ch2 = h[i] - 'a';
-      fh[ch1]++; fh[ch2]--;
-    }
-  }
-  cout << st.size() << "\n";
+
+    cout << perms.size();
 }
