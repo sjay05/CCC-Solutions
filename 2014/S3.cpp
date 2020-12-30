@@ -29,7 +29,7 @@ int main()
 
         int curr = 1;
 
-        for (int b = 0; b < cars.size(); ++b)
+        for (size_t b = 0; b < cars.size(); ++b)
         {
             if (cars[b] == curr)
             {
@@ -47,7 +47,7 @@ int main()
             }
         }
 
-        for (int b = 0; b < branch.size(); ++b)
+        for (size_t b = 0; b < branch.size(); ++b)
         {
             if (branch[b] == curr)
                 curr += 1;
@@ -59,6 +59,6 @@ int main()
             output.push_back('Y');
     }
 
-    for (int a = 0; a < output.size(); ++a)
+    for (size_t a = 0; a < output.size(); ++a)
         cout << output[a] << '\n';
 }
