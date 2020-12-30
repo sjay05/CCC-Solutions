@@ -23,7 +23,7 @@ int main()
         cin >> num;
 
         vector<int> temp;
-        for (int b = 0; b < people.size(); ++b)
+        for (size_t b = 0; b < people.size(); ++b)
         {
             if ((b + 1) % num != 0)
                 temp.push_back(people[b]);
@@ -32,6 +32,6 @@ int main()
         people = temp;
     }
 
-    for (int a = 0; a < people.size(); ++a)
+    for (size_t a = 0; a < people.size(); ++a)
         cout << people[a] << '\n';
 }
