@@ -24,7 +24,7 @@ int main()
     double time = abs(nums[0][0] - nums[1][0]);
     double dist = abs(nums[0][1] - nums[1][1]);
 
-    for (int a = 1; a < nums.size() - 1; ++a)
+    for (size_t a = 1; a < nums.size() - 1; ++a)
     {
         double t = abs(nums[a][0] - nums[a + 1][0]);
         double d = abs(nums[a][1] - nums[a + 1][1]);
