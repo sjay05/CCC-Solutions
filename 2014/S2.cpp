@@ -30,7 +30,7 @@ int main()
         students2[a] = name;
     }
 
-    for (int a = 0; a < students1.size(); ++a)
+    for (size_t a = 0; a < students1.size(); ++a)
     {
         if (students1[a] == students2[a])
         {
@@ -40,7 +40,7 @@ int main()
 
         string partner = students2[a];
 
-        for (int b = 0; b < students1.size(); ++b)
+        for (size_t b = 0; b < students1.size(); ++b)
         {
             if (students1[b] == partner && students2[b] != students1[a])
             {
