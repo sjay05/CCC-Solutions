@@ -1,3 +1,7 @@
+/*
+ * Author: DynamicSquid
+ */
+
 #include <iostream>
 #include <vector>
 using namespace std;

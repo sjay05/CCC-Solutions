@@ -1,3 +1,7 @@
+/*
+ * Author: DynamicSquid
+ */
+
 #include <iostream>
 #include <iomanip>
 #include <algorithm>

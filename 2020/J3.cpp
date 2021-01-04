@@ -1,3 +1,7 @@
+/*
+ * Author: DynamicSquid
+ */
+
 #include <iostream>
 using namespace std;
 
