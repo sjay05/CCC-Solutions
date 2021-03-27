@@ -1,20 +1,19 @@
+/*
+ * Author: DynamicSquid
+ */
+
 #include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
 
-int main()
-{
+int main() {
     int num;
     cin >> num;
 
-    vector<string> lines;
-    for (int a = 0; a < num; ++a) {
-        string line;
-        cin >> line;
-
-        lines.push_back(line); 
-    }
+    vector<string> lines(num);
+    for (int a = 0; a < num; ++a)
+        cin >> lines[a];
 
     for (size_t a = 0; a < lines.size(); ++a) {
         char letter = lines[a][0];
